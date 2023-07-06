@@ -1,0 +1,62 @@
+<div class="outer">
+    <div class="container">
+        <div class="row">
+            <div class="offset-md-2 col-lg-5 col-md-7 offset-lg-4 offset-md-3">
+                <div class="panel border bg-white" >
+                    <div class="panel-heading">
+                        <h3 class="pt-3 font-weight-bold">Add Teacher</h3>
+                    </div>
+                    <div class="panel-body p-3">
+                        <form [formGroup]="AddTeacherForm">
+                            <div class="form-group pt-3">
+                                <div class="input-field">
+                                    <span class="fa fa-user p-2"></span>
+                                    <input formControlName="Name" type="text" placeholder="Name">
+                                </div>
+                            </div>
+                            <small *ngIf="AddTeacherForm.controls['Name'].dirty && AddTeacherForm.hasError('required','Name')"class="text-danger">*Name is required</small>
+                            <div class="form-group pt-3">
+                                <div class="input-field">
+                                    <span class="fa fa-user p-2"></span>
+                                    <input formControlName="SubjectTaught" type="text" placeholder="SubjectTaught">
+                                </div>
+                            </div>
+                            <small *ngIf="AddTeacherForm.controls['SubjectTaught'].dirty && AddTeacherForm.hasError('required','SubjectTaught')"class="text-danger">*Subject is required</small>
+                            <div class="form-group pt-3">
+                                <div class="input-field">
+                                    <span class="fa fa-user p-2"></span>
+                                    <input formControlName="Salary" type="number" placeholder="Salary">
+                                </div>
+                            </div>
+                            <small *ngIf="AddTeacherForm.controls['Salary'].dirty && AddTeacherForm.hasError('required','Salary')"class="text-danger">*Salary is required</small>
+                            <div class="form-group pt-3">
+                                <div class="input-field">
+                                    <span class="fa fa-user p-2"></span>
+                                    <input formControlName="Dob" type="date" placeholder="DOB">
+                                </div>
+                            </div>
+                            <small *ngIf="AddTeacherForm.controls['Dob'].dirty && AddTeacherForm.hasError('required','Dob')"class="text-danger">*DOB is required</small>
+                            <div class="form-group pt-3">
+                                <div class="input-field">
+                                    <span class="fa fa-user p-2"></span>
+                                    <input formControlName="Email" type="text" placeholder="Email">
+                                </div>
+                            </div>
+                            <small *ngIf="AddTeacherForm.controls['Email'].dirty && AddTeacherForm.hasError('required','Email')"class="text-danger">*email is required</small>
+                        
+                            <div class="form-group pt-3">
+                                <div class="input-field">
+                                    <span class="fa fa-lock p-2"></span>
+                                    <input formControlName="Password" [type]="type" placeholder="Password">
+                                    <span (click)="hideshowPassword()" class="fa {{eyeIcon}}"></span>
+                                </div>
+                            </div>
+                            <small *ngIf="AddTeacherForm.controls['Password'].dirty && AddTeacherForm.hasError('required','Password')" class="text-danger">*password is required</small>
+                            <button (click)="OnAddTeacher()" type="submit" class="btn btn-primary btn-block mt-4 w-100">Add Teacher</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

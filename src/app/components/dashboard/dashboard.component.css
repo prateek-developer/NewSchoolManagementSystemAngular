@@ -1,0 +1,23 @@
+main-container{
+    display: flex;
+    flex-direction: row;
+}
+
+.body{
+    display: flex;
+   
+}
+.mainbody{
+    display: flex;
+    flex-direction: column;
+}
+
+.classBody{
+    display: flex;
+    flex-direction: row;
+}
+
+.card{
+    margin: 10px;
+    height: 30vh;
+}
